@@ -1,0 +1,10 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+create_product:
+    path: /products/
+    methods: ['POST']
+    defaults:
+        _controller: App\Controller\ProductController::createProduct
+        _api_resource_class: App\Entity\Product
+        _api_item_operation_name: create_product
